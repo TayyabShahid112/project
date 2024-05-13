@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost Children Tracking System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha384-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    crossorigin="anonymous">
+    
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .navbar {
+      background-color: rgb(163, 36, 36);
+    }
+
+    .navbar-brand img.logo {
+      max-height: 50px;
+      margin-left: 15px;
+    }
+    .logo{
+        border-radius: 50%;
+    }
+
+    .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ffc107;
+    }
+
+    .main-image {
+  background: url('bg.png.jpeg') no-repeat center center;
+  background-size: cover;
+  height: 600px; /* Increased height */
+  position: relative; /* Add position relative for overlay */
+}
+
+/* Overlay styles */
+.main-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+}
+
+.text-container_1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  width: 100%; /* Ensure text is centered horizontally */
+  padding: 0 20px; /* Add padding for better readability */
+  box-sizing: border-box; /* Include padding in width calculation */
+  z-index: 1; /* Ensure content is on top of overlay */
+}
+
+.text-container_1 h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  font-size: 1.25rem;
+}
+    .card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-top {
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+    .card img{
+        display: block;
+         width: 100%; /* Adjust as needed */
+        height: 200px; /* Adjust as needed */
+         object-fit: cover; /* Ensure the image covers the entire area */
+        overflow: hidden;
+    }
+    .btn-primary {
+      background-color: #dc3545;
+      border-color: #dc3545;
+    }
+
+    .btn-primary:hover {
+      background-color: #c82333;
+      border-color: #bd2130;
+    }
+
+    .footer {
+      background-color: #212529;
+      color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer .social-icons i {
+      font-size: 24px;
+      margin: 0 10px;
+    }
+
+    .text-danger-emphasis {
+      color: black;
+    }
+    .display-4{
+      font-weight: 900;
+      color: white;
+    }
+    .lead{
+      font-weight: 400;
+      color: white;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand"  href="index.html" >
+        <img src="logo.png.jpg" alt="Logo" class="logo" >
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="report.html">Missing Report</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="text-end">
+        <button type="button" class="btn btn-outline-light me-2"><a style="text-decoration: none;color: black;" href="login.html">Login</a></button>
+        <button type="button" class="btn btn-warning"><a style="text-decoration: none; color: black;" href="signup.html">Sign-up</a></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Image -->
+  <div class="main-image">
+    <div class="text-container_1">
+      <h1 class="display-4">Save The Children</h1>
+      <p class="lead">"Save The Child" is a heartfelt initiative dedicated to protecting and empowering children worldwide. Through advocacy, education, and community engagement, we strive to create a safer and brighter future for every child. Join us in our mission to ensure every child's right to a happy, healthy, and secure childhood. Together, we can make a lasting difference and save lives.</p>
+      
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <h1 class="card-title" style="font-weight: 900;">Introduction</h1>
+        <h5>We are dedicated to finding missing children and protecting children from all forms of violence and exploitation. Save the child, is Pakistan’s first non-profit organization devoted to the cause of missing children. We operate a 24-hour nationwide helpline for reporting missing children cases, and conduct search and recovery operations through our network of volunteers and in collaboration with law enforcement agencies.</h5>
+      </div>
+      <div class="col">
+        <img src="recovery.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  
+  <div class="container mt-5">
+    <h1 style="font-weight: 900;">Search and Recovery of missing children</h1>
+    <p class="mb-5">We recover and reunite missing children with their families through an innovative neighborhood early warning system. We have developed a vast network of thousands of volunteers working in a wide variety of public spaces, including street vendors, workers at roadside shops and restaurants, PCO operators, imams of local mosques, and members of the Khwajasira transgender community.</p>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="missing1.jpg" class="card-img-top new_top" alt="Category 1">
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="missing2.jpg" class="card-img-top" alt="Category 2">
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="missig3.jpg" class="card-img-top" alt="Category 3">
+        </div>
+        <div>
+            <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div>
+    <h1 class="missing" style="font-weight: 900; text-align: center;" >Missing Children</h1> 
+  </div>
+  <br>
+  <br>
+  <div style="display: flex;">
+    <img src="lost1.jpg" alt="Image 1" style="width: 400px; height: 400px; margin-left: 60px;">
+    <img src="lost2.jpg" alt="Image 2" style="width: 400px; height: 400px;">
+    <img src="lost3.jpg" alt="Image 2" style="width: 400px; height: 400px;">
+</div>
+<br>
+<div style="display: flex;">
+  <img src="lost4.jpg" alt="Image 1" style="width: 400px; height: 400px; margin-left: 60px;">
+  <img src="lost5.jpg" alt="Image 2" style="width: 400px; height: 400px;">
+  <img src="lost6.jpg" alt="Image 2" style="width: 400px; height: 400px;">
+</div>
+<br>
+<div style="display: flex;">
+  <img src="lost7.jpg" alt="Image 1" style="width: 400px; height: 400px; margin-left: 60px;">
+  <img src="lost8.jpg" alt="Image 2" style="width: 400px; height: 400px;">
+  <img src="lost9.jpg" alt="Image 2" style="width: 400px; height: 400px;">
+</div>
+ <br>
+ <br>
+<!-- <div class="col-inner text-center">
+  <a href="" class="button alert is-outline is-large">
+      <button style="color: #c82333;"><span>View all missing children</span></button>
+  </a>
+      </div><br> -->
+      <br>
+
+
+ <div class="bg-danger text-secondary px-4 py-5 text-center">
+  <div class="py-5">
+    <h1 class="display-5 fw-bold text-white">Report a missing Children</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="fs-5 mb-4" style="color: black;">Act immediately if you believe your child is missing. Please submit the missing person form below and someone from our team will reach out to you to explain the next steps. </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-outline-warning btn-lg px-4 me-sm-3 fw-bold"><a style="text-decoration: none;" href="report.html"> Report Now!</a></button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+
+  <!-- Customized Theme -->
+  <div class="container-fluid theme-section mt-5">
+    <div class="container">
+      
+    </div>
+  </div>
+
+
+  <!-- Our services -->
+  <div class="container mt-5">
+    <h1 class="mb-5" style="text-align: center; font-weight: 900;">Our Services</h1>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="donation.jpg" class="card-img-top" alt="Vendor 1">
+          <div class="card-body">
+            <h5 class="card-title">Donations</h5>
+            <p class="card-text">For Helping the poor child and family</p>
+            <!-- <a href="#" class="btn btn-primary">View Profile</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="study.jpg" class="card-img-top" alt="Vendor 2">
+          <div class="card-body">
+            <h5 class="card-title">Education</h5>
+            <p class="card-text">Provide Education to deserving people</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="rashan.jpg" class="card-img-top" alt="Vendor 3">
+          <div class="card-body">
+            <h5 class="card-title">Rashan</h5>
+            <p class="card-text">Feed poor people</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+      <p class="mt-3">"Together, let's bring hope and reunite families. Join us in our mission to safeguard children and protect our future. Helping you find peace of mind. Connect with us to support our efforts in reuniting families. Providing a beacon of hope in times of uncertainty. Your support fuels our commitment to child safety. 2024 Lost Children Tracking System - Empowering communities to locate and rescue missing children."</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
